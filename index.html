@@ -5,50 +5,183 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Ben Ahrens CS-499</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<h1>Ben Ahrens<br>CS-499 Final Project</h1>
-				</div>
-			</section>
+<head>
+	<title>Ben Ahrens CS-499</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
 
-			<section id="one" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Introduction</h2>
-					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-				</div>
-			</section>
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</section>
+<body class="is-preload">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+	<!-- Header -->
+	<section id="header">
+		<div class="inner">
+			<h1>Ben Ahrens<br>CS-499 ePortfolio</h1>
+		</div>
+	</section>
 
-	</body>
+	<section id="one" class="main style1 special">
+		<div class="container">
+			<header class="major">
+				<h2>Introduction</h2>
+			</header>
+			<p>Hello, my name is Benjamin Ahrens and this page is here to show how I've improved during my stay at SNHU
+				these past 3 years. Below you will see many improvements to a application I started before attending
+				SNHU that I simply called Warframe Price Checker. The
+				application uses Tesseract, an open source OCR to detect rewards on the screen, http requests to
+				warframe.market to pull recent order information on each item and display the current price those items
+				go for. I included this artifact in my portfolio because I believe there is a lot I can do to improve
+				this project since I made it so long ago and left it bare bones and wanted to use this opportunity to
+				improve it with the knowledge I acquired at SNHU.</p>
+		</div>
+		<p>
+			The old project made in python can be found <a
+				href="https://github.com/BenAhrens99/PriceChecker">here</a><br>
+			The new project with all enhancements can be found <a href="https://github.com/BenAhrens99/wfpc">here</a>
+		</p>
+
+		<div class="container">
+			<p>
+				My time at SNHU more than anything helped improve my ability to collaborate in a team environment,
+				before
+				attending SNHU I only created coding projects for myself and they had a wide range of technical debt.
+				During
+				the course of this class I went back and updated one of those old projects to fit my current coding
+				style
+				which is much easier to work with. In the same project I’ve enhanced it to have a more efficient and
+				secure
+				database than what was previously used. I've also come to believe that the most critical phase of
+				software
+				development is the initial one: defining requirements through collaboration between stakeholders,
+				programmers, and end-users. This class has sharpened that belief by focusing on stakeholder
+				communication.
+				On a related note, team collaboration has shown me how this same principle of external input applies to
+				my
+				own work. I often become too immersed in a project to see it objectively, and a fresh perspective from a
+				teammate is invaluable for spotting hidden mistakes and suggesting improvements.
+			</p>
+		</div>
+	</section>
+	<section id="one" class="main style2 special">
+		<div class="container">
+			<header class="major">
+				<h2>Artifact 1: Software Engineering and Design</h2>
+			</header>
+			<p>The enhancement that was done was a full rewriting of the application in java. The Java stack I used is
+				Maven for project management, Tess4J for the OCR when reading the rewards on screen, and Java’s built in
+				http client and JSON Parser to request the JSON data from warframe.market, both for the total item list
+				and gathering price data. The biggest improvement made with rewriting the project would be the
+				readability of the code and reduced technical debt. While the codebase is fairly small still the python
+				code was fairly rushed and just focused on getting it working. When going back and rewriting it I made
+				sure to break up the processes into smaller methods, named variables more clearly and added comments at
+				places where it isn’t very clear why something is done that way. As for technical improvements,
+				capturing the screen and reading rewards was heavily improved. I used Java’s robots to capture
+				specifically warframe and only record where the reward text would be. This was done fairly easily by
+				using a percentage of the overall screen region to locate the reward text, the UI in warframe scales the
+				exact same way so it now works with any resolution the game provides. Adjustments to the OCR
+				configuration were also made, adjusting the dpi to fit more accurately with the screen region that is
+				provided, this allowed for more accurate text readings from Tess4J when before it wasn’t functioning
+				very well on lower resolutions.I believe I did meet the course outcomes I planned in module one, the
+				only outcome I was looking to meet was demonstrating the ability to use well-founded and innovative
+				techniques, skills and tools for the purpose of implementing computer solutions that deliver value and
+				accomplish industry-specific goals. This was shown through the usage of Tess4J and optimizing it further
+				for my use case. Another outcome I met with this enhancement would be employing strategies for building
+				collaborative environments. With the code I wrote it was designed to be much more readable than its
+				counterpart and people should have a much easier time understanding what is going on.</p>
+			<p> I had many issues when trying to rewrite this artifact in a whole different language. Switching from
+				Python to Java ended up using many different tools, with some being easier to implement and others much
+				harder while the only one staying the same being Tess4J. Capturing a screen region through Java’s robot
+				class eliminated the need for OpenCV and allowed for a much more efficient way of reading the screen and
+				less dependencies. Some challenges I faced when changing to Java was the change to a statically typed
+				language, this made reading the JSON files pulled from warframe.markets API a bit harder to read. OpenCV
+				also didn’t have the same functionality as it did in their python package so I had to switch to a
+				different class, this ended up being for the better but required more research on what I should use.</p>
+		</div>
+	</section>
+	<section id="one" class="main style3 special">
+		<div class="container">
+			<header class="major">
+				<h2>Artifact 2: Algorithms and Data Structures</h2>
+			</header>
+			<p>The enhancement that was done this time was lessening the load on warframe.markets API, reducing the
+				number of calls significantly to their API and storing pricing information in a MongoDB database. This
+				comes at the cost of data freshness as taking from the API directly would be more accurate but it would
+				take much longer to get the pricing information. I also changed from permanently capturing the screen to
+				user inputted screen capture to not take as many resources. While these enhancements are fairly small
+				they are a key move to increase performance and get item prices to the user as soon as possible. This
+				change to the screen capture ended up being the most efficient way to handle it, allowing the user to
+				see the prices when they want to and not popping up every time they get on a reward screen but only when
+				they are uncertain about the values. I’m not going to talk too much about the database as it was just to
+				allow for less API calls and will be fleshed out during the next enhancement.
+				I ended up meeting one of the course outcomes I planned to meet with this enhancement from module one,
+				meeting only one isn’t an issue here as I already met the first of the two in enhancement one. The
+				second planned enhancement was “Design and evaluate computing solutions that solve a given problem using
+				algorithmic principles and computer science practices and standards appropriate to its solution while
+				managing the trade-offs involved in design choices.” I believe this was met when focusing on the
+				trade-off between data freshness and speed, speed is much more important in this program as you are only
+				given a small amount of time to pick which reward you want. This makes it worth sacrificing some data
+				freshness to allow the user to have a more thought out decision before it disappears. The screen not
+				recording all the time but only when the user wants a screenshot will also be very beneficial to lower
+				end devices, not taking away as much resources while the program is running. </p>
+			<p>
+				When improving the artifact I learned a few things that made it impossible to achieve my old goal.
+				Looking further into warframe.markets API they do not have a batch endpoint that I would be able to use
+				to get around the 3 requests per second limit. Because of this I decided to create a barebones version
+				of the database earlier than expected so it can reduce the strain on warframe.market’s API. While I
+				didn’t run into any issues when implementing an event-driven capture method with the current state of
+				the application just allowing the user to pick when they want to show the reward prices ended up feeling
+				much better, this might end up becoming a toggleable feature in the future but isn’t in the application
+				at the moment.
+			</p>
+		</div>
+	</section>
+	<section id="one" class="main style2 special">
+		<div class="container">
+			<header class="major">
+				<h2>Artifact 3: Databases</h2>
+			</header>
+			<p>These enhancements were all about securing the database and providing a schema for the data being
+				entered. As mentioned in artifact two I moved from a CSV file to mongoDB, since I can rebuild the
+				database fairly quickly due to the small amount of items on warframe.market there was no need to migrate
+				any data and I could just create a new method to build it from scratch. The first thing I did after
+				moving the data was create a schema within my mongo database setting the required parameters for each
+				entry and the data type they would be. The only information we are storing in this database is
+				information on prime parts opened from relics. This is fairly simple to add as I have already defined
+				all these variables as an object in my Java project. Each item will have its name as a string, its url
+				for the warframe.market API as a string, the currently stored price of the item as a double and the last
+				updated date as a date. The reason the price is a double instead of an int when warframe.market only
+				trades in whole values is because we are averaging the lowest 5 prices in warframe.market. The biggest
+				reason for my use of mongoDB over a relational database is to plan for the future, with the addition of
+				new items or new features. Being able to adjust the schema as needed will be essential to a more rapidly
+				changing environment as nothing I’ve done so far is guaranteed to stay the same. There was no real
+				issues with this enhancement, the data was very easy to handle and the schema was already set when
+				making it a java object. With this the last course outcome of developing a security mindset that
+				mitigates design flaws would be met.</p>
+		</div>
+	</section>
+	<section id="footer">
+		<ul class="icons">
+			<li><a href="https://github.com/BenAhrens99" class="icon brands alt fa-github"><span
+						class="label">GitHub</span></a></li>
+		</ul>
+		<ul class="copyright">
+			<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+		</ul>
+	</section>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
